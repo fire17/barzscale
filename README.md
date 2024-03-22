@@ -3,6 +3,11 @@
 _The Barz Scale of AGI is meant to <u>clearly define</u> <br>the <u>spectrum for artificial intelligence</u>  and provide <br> a <u> common standard</u> for everyone._ <br>
         
     If you feel like someone is referring to AGI but doesn't have a clear definition of it, please show them this scale.
+
+`I/We Still need to refine the scale, and make it a clear cut and simple scale, with harder turing-tests for each stage of agi`
+so this is not the final version, but hopefully a good starting point<br>
+Check out the live version at [akeyo.io/barzscale/](akeyo.io/barzscale/)
+<br><br>
 ![main-thumb2](https://github.com/fire17/barzscale/assets/9356048/bc3f4811-e483-4ef6-939f-10f50379b4e5)
 ![Stages](https://github.com/fire17/barzscale/assets/9356048/3dae6413-782d-432a-9b97-fa311f4a765c)
 
