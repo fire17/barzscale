@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGI Threshold Test</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .title {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 40px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .subtitle {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .card {
+        flex: 1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        margin: 0 10px;
+        border: 2px solid #fff;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative; /* Add this line */
+		
+    }
+    .card h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .card p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: -1vh;
+    }
+    .card .keys {
+        color: #007bff; /* blue */
+        font-weight: bold;
+    }
+    .card .values {
+        color: #28a745; /* green */
+    }
+    .card .example-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .footer {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 28px;
+        color: #333;
+        margin-top: 50px;
+    }
+    /* Background Colors for Cards */
+    .type1 {
+        background: linear-gradient(180deg, rgba(255, 255, 0, 1) 0%, rgba(0, 255, 0, 1) 300%);
+    }
+    .type2 {
+        background: linear-gradient(180deg, rgba(255, 255, 0, 1) -400%, rgba(0, 255, 0, 0.5) 50%, rgba(0, 255, 255, 1) 250%);
+    }
+    .type3 {
+        background: linear-gradient(180deg, rgba(0, 255, 0, 0.5) -50%, rgba(0, 255, 255, 1) 100%);
+    }
+    /* Hide Placeholder Images */
+    .card img.placeholder {
+        display: none;
+    }
+    /* Reduce Margin Bottom for Keys in Last Card */
+    .card.type3 .keys {
+        margin-bottom: 3px;
+    }
+</style>
+</head>
+<body>
+</body>
+<div class="container"><p style="margin-bottom:-2vh;"><br></p>
+    <h1 class="title" >AGI</h1>
+    <h2 style="margin-top: -3vh;">Artifical General Intelligence</h1>
+    <p class="subtitle">Threshold Test: Can continuesly explore it's enviorenment, improve itself AND learn untrained skilles by itself</p>
+    <div class="card-container">
+        <div class="card type1">
+            <h2>Type 1</h2>
+            <strong><p>Can improve and learn new skills (without human help)</p></strong>
+            <br><br><br><br><br><br><br><br>
+			<span class="keys" style="margin-bottom: -2.5vh;">Examples - </span>
+			
+            <div class="example-container" style="margin-bottom: -.7vh;">
+                <p><span class="keys">Min:</span> <span class="values"><placeholder></span></p>
+                <p><span class="keys">Max:</span> <span class="values"><placeholder></span></p>
+            </div>
+            <div class="example-container">
+                <p><span class="keys"> Voyager </span> <span class="values"><placeholder></span></p>
+                <p><span class="keys"> --- </span> <span class="values"><placeholder></span></p>
+            </div>
+			<br>
+            <p><span class="keys">General Purpose Solver</span> <span class="values"><placeholder></span></p>
+        </div>
+        <div class="card type2">
+            <h2>Type 2</h2>
+            <strong><p>Can learn and act in new domains (with minimal human help)</p></strong>
+			<br><br><br><br><br><br><br><br>
+			<span class="keys" style="margin-bottom: -2.5vh;">Examples - </span>
+			
+            <div class="example-container" style="margin-bottom: -.7vh;">
+                <p><span class="keys">Min:</span> <span class="values"><placeholder></span></p>
+                <p><span class="keys">Max:</span> <span class="values"><placeholder></span></p>
+            </div>
+            <div class="example-container">
+                <p><span class="keys"> --- </span> <span class="values"><placeholder></span></p>
+                <p><span class="keys"> --- </span> <span class="values"><placeholder></span></p>
+            </div>
+			<br>
+            <p><span class="keys">Works across domains<br></span> <span class="values"><placeholder></span></p>
+        </div>
+        <div class="card type3">
+            <h2>Type 3</h2>
+            <strong><p>Can run independently - self-managing (continuously runs itself).</p></strong>
+            <p>Self-reflective, self-improving, figures out everything without human involvement.</p>
+            <br><br><br><br>
+			<span class="keys" style="margin-bottom: -2.5vh;">Examples - </span>
+			
+            <div class="example-container" style="margin-bottom: -.7vh;">
+                <p><span class="keys">Min:</span> <span class="values"><placeholder></span></p>
+                <p><span class="keys">Max:</span> <span class="values"><placeholder></span></p>
+            </div>
+            <div class="example-container">
+                <p><span class="keys"> --- </span> <span class="values"><placeholder></span></p>
+                <p><span class="keys"> --- </span> <span class="values"><placeholder></span></p>
+            </div>
+			<br>
+            <p><span class="keys">Can do generally/virtually anything you ask</span> <span class="values"><placeholder></span></p>
+        </div>
+    </div>
+    <h1 class="footer" style="margin-top: 5vh;">- The Age of Wishes -</h1>
+    <h1 class="title" style="padding-bottom:2vh; margin-top: -3vh; font-size:4vw;">▢</h1>
+	
+</div>
+
+</html>
