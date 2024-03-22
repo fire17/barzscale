@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Color Bar with Gradient Zoom Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .color-bar {
+      width: 60%;
+      height: 1000px;
+      background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, indigo, purple);
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .color-bar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, var(--gradient-stops));
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="color-bar"></div>
+
+  <script>
+    const colorBar = document.querySelector('.color-bar');
+    const gradientStops = [
+      'red 0%',
+      'orange 0%',
+      'yellow 0%',
+      'green 0%',
+      'cyan 0%',
+      'blue 0%',
+      'indigo 0%',
+      'purple 100%'
+    ];
+
+    colorBar.addEventListener('mousemove', (e) => {
+      const rect = e.target.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const maxDistance = 30; // Maximum distance from the bar for the effect to start
+      const distance = Math.abs(x - rect.width / 2);
+
+      if (distance < rect.width / 2 + maxDistance) {
+        const zoomFactor = 1 - (maxDistance - distance) / maxDistance * 0.8;
+        const gradientWidth = 100 / gradientStops.length;
+        const zoomIndex = Math.floor((x / rect.width) * gradientStops.length);
+        const zoomCenter = (zoomIndex + 0.5) * gradientWidth;
+
+        const expandedGradientStops = gradientStops.map((stop, index) => {
+          const stopPosition = index * gradientWidth;
+          const expandedPosition = stopPosition + (stopPosition - zoomCenter) * zoomFactor;
+          return `${stop.split(' ')[0]} ${expandedPosition}%`;
+        });
+
+        colorBar.style.setProperty('--gradient-stops', expandedGradientStops.join(', '));
+      } else {
+        colorBar.style.removeProperty('--gradient-stops');
+      }
+    });
+
+    colorBar.addEventListener('mouseleave', () => {
+      colorBar.style.removeProperty('--gradient-stops');
+    });
+  </script>
+</body>
+</html>
